@@ -14,10 +14,10 @@
 (add-hook 'ensime-mode-hook #'scala/enable-eldoc)
 
 
-(define-key global-map "\C-i" 'ensime-type-at-point)
+(define-key scala-mode-map "\C-i" 'ensime-type-at-point)
 
 ;;import
 ;;(define-key global-map "\C-:" 'ensime-import-type-at-point)
 
 ;;
-(define-key global-map "\C-c\C-ce" 'ensime-print-errors-at-point)
+(define-key scala-mode-map "\C-c\C-ce" 'ensime-print-errors-at-point)

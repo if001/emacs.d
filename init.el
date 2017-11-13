@@ -19,6 +19,22 @@
 ;;
 
 
+
+;;-------------------------------------------------------------------------;;
+(require 'package)
+
+; Add package-archives
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/")) ; ついでにmarmaladeも追加
+
+; Initialize
+(package-initialize)
+
+; melpa.el
+;;(require 'melpa)
+;;-------------------------------------------------------------------------;;
+
+
 ;;-------------------------------------------------------------------------;;
 ;; load-pathの追加関数
 ;;emacs-lispのファイルを読み込むパスを設定
@@ -27,7 +43,8 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(package-initialize)
+
+;;(package-initialize)
 
 (defun add-to-load-path (&rest paths)
   (let (path)
@@ -64,6 +81,7 @@
 
 
 
+
 ;; ;;-------------------------------------------------------------------------;;
 ;; ;;goモード
 ;; ;;-------------------------------------------------------------------------;;
@@ -82,17 +100,34 @@
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (custom-set-variables
+;;  ;; custom-set-variables was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(blink-cursor-mode nil)
+;;  '(helm-split-window-default-side (quote \50))
+;;  '(inhibit-startup-screen t)
+;;  '(package-selected-packages
+;;    (quote
+;;     (jedi company-jedi web-mode tabbar helm yasnippet all-the-icons-gnus all-the-icons magit flycheck-pycheckers company-anaconda ac-python py-autopep8 flycheck company-quickhelp company undo-tree smooth-scroll recentf-ext powerline neotree multi-term julia-mode init-loader hiwin flymake-python-pyflakes flymake ensime dired-toggle dired-subtree auto-complete)))
+;;  '(show-paren-mode t))
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(linum ((t (:inherit (shadow default) :background "grey10")))))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(blink-cursor-mode nil)
- '(helm-split-window-default-side (quote \50))
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (web-mode tabbar helm yasnippet all-the-icons-gnus all-the-icons magit company-jedi jedi flycheck-pycheckers company-anaconda ac-python py-autopep8 flycheck company-quickhelp company undo-tree smooth-scroll recentf-ext powerline neotree multi-term julia-mode init-loader hiwin flymake-python-pyflakes flymake ensime dired-toggle dired-subtree auto-complete)))
+    (python-mode web-mode undo-tree tabbar smooth-scroll recentf-ext pyvenv powerline neotree multi-term magit julia-mode jedi init-loader hiwin highlight-indentation helm flymake-python-pyflakes flymake flycheck-pycheckers find-file-in-project ensime dired-toggle dired-subtree company-quickhelp company-jedi company-anaconda auto-compile all-the-icons-gnus ac-python)))
  '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

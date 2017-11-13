@@ -1,8 +1,15 @@
+;;;
+(require 'jedi-core)
+(setq jedi:complete-on-dot t)
+(setq jedi:use-shortcuts t)
+(add-hook 'python-mode-hook 'jedi:setup)
+(add-to-list 'company-backends 'company-jedi) ; backendに追加
 
+(define-key 'python-mode-map "\C-i" 'company-jedi)
 
-(define-key python-mode-map (kbd "TAB") 'indent-for-tab-command)
-
-(define-key python-mode-map (kbd "t") nil)
+;; ;; Standard Jedi.el setting
+;; (add-hook 'python-mode-hook 'jedi:setup)
+;; (setq jedi:complete-on-dot t)
 
 
 ;; (defun ac-python-candidates ()

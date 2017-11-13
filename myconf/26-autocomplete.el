@@ -4,7 +4,6 @@
 ;; (global-set-key [\C-tab] 'auto-complete-mode)
 
 
-
 ;;設定
 ;; (require 'auto-complete-config)
 ;; (setq ac-auto-start t) ; 自動的に開始しない

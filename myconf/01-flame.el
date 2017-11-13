@@ -12,7 +12,7 @@
 ;;起動時のフレームサイズを設定する
 (setq initial-frame-alist
       (append (list
-	'(width . 90)
+	'(width . 170)
         '(height . 45)
         )
        initial-frame-alist))

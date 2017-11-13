@@ -8,9 +8,6 @@
 ;; まず、scratchバッファに書いてC-jで評価して、エラーがでなければ設定ファイルに
 ;; 書いた方が良い。
 
-;; ディレモードでC-t無効
-(define-key dired-mode-map (kbd "C-t") nil)
-
 
 ; コメントアウト
 (define-key global-map "\C-c;" 'comment-region)
@@ -31,6 +28,8 @@
 
 ;;ウィンドウ移動(mac)
 (when (eq system-type 'darwin)
+  ;; dire-modeでC-t無効
+  (define-key dired-mode-map (kbd "C-t") nil)
   (global-set-key [(C t)] 'other-window))
 
 ;;ウィンドウ移動(linux)
